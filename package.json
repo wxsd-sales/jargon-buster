@@ -12,7 +12,10 @@
     "lint": "prettier --ignore-path .gitignore --plugin-search-dir . --check . && eslint --ignore-path .gitignore .",
     "format": "prettier --ignore-path .gitignore --plugin-search-dir . --write .",
     "test:integration": "playwright test",
-    "test:unit": "vitest"
+    "test:unit": "vitest",
+    "db:migration:create": "node --experimental-modules --experimental-specifier-resolution=node --loader ts-node/esm --no-warnings ./node_modules/.bin/mikro-orm-esm migration:create",
+    "db:migration:up": "node --experimental-modules --experimental-specifier-resolution=node --loader ts-node/esm --no-warnings ./node_modules/.bin/mikro-orm-esm migration:up",
+    "start": "npm run db:migration:up && npm run build && npm run preview"
   },
   "devDependencies": {
     "@auth/sveltekit": "^0.12.3",
