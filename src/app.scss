@@ -1,0 +1,65 @@
+/* Write your global styles here, in SCSS syntax. Variables and mixins from the src/variables.scss file are available here without importing */ /* Import only what you need from Bulma */
+
+// Fonts
+@import '@mdi/font/scss/materialdesignicons';
+
+// Import Bulma styles
+@import 'bulma/sass/utilities/_all';
+@import 'bulma/sass/base/_all';
+@import 'bulma/sass/elements/_all';
+@import 'bulma/sass/form/_all';
+@import 'bulma/sass/components/_all';
+@import 'bulma/sass/grid/_all';
+@import 'bulma/sass/helpers/_all';
+@import 'bulma/sass/layout/_all';
+
+:root {
+  --brand-title-size: calc(#{$title-size} * 2 + 0.35);
+  --brand-subtitle-size: calc(#{$title-size} * 0.5 + 0.35);
+  --border-radius: #{$radius};
+  --border-radius-large: #{$radius-large};
+  --size-1: #{$size-1};
+  --size-2: #{$size-2};
+  --size-3: #{$size-3};
+  --size-4: #{$size-4};
+  --size-5: #{$size-5};
+  --size-6: #{$size-6};
+  --size-7: #{$size-7};
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+details {
+  border: 1px solid hsl(0deg, 0%, 86%);
+  border-radius: var(--border-radius);
+  padding: 0.75rem;
+}
+
+details > summary {
+  cursor: pointer;
+}
+
+pre {
+  max-height: 400px;
+  border-radius: var(--border-radius);
+}
+
+//* {
+//  outline: lightgrey dashed 1px;
+//}
+//.container {
+//  outline: lightgreen dashed 4px;
+//}
+//.columns {
+//  outline: lightskyblue dashed 3px;
+//}
+//.column {
+//  outline: lightblue dashed 2px;
+//}
