@@ -13,7 +13,7 @@ export class Session extends BaseEntity implements AdapterSession {
   @Property({ type: types.string, persist: false })
   userId!: string;
 
-  @Property({ type: types.date })
+  @Property({ type: types.datetime })
   expires!: Date;
 
   @Property({ type: types.string, unique: true })
